@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  
+  get 'posts' => 'posts#index'
+  
+  get 'posts/new' => 'posts#new'
+  
+  get 'posts/:id' => 'posts#show'
+  
+  post 'posts' => 'posts#create'
+  
+  get 'posts/:id/edit' => 'posts#edit'
+  put 'posts/:id' => 'posts#update'
+  
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -13,6 +27,7 @@ Rails.application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
+  #   resources :posts
 
   # Example resource route with options:
   #   resources :products do
