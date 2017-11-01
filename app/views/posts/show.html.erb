@@ -1,5 +1,11 @@
+<% if current_user == @post.user %>
 <a href = "/posts/<%= @post.id %>/edit">Edit</a>
+<%= link_to("Delete",@posts, method: :delete) %>
 
 <div>
-    <%= @post.content %>
+    <!-- <img src="<%= post.image.url %>"> -->
+    <p>
+        <%= @post.user.email %>
+        <%= @post.content %>
+    </p>
 </div>

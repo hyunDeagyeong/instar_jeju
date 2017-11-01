@@ -1,5 +1,15 @@
 source 'https://rubygems.org'
 
+gem 'fog' #aws
+gem 'carrierwave' #image 업로드
+gem 'figaro'  #key 관리
+gem 'mini_magick'  #image 편집
+gem 'bootstrap'
+gem 'devise'
+
+#sudo apt-get install imagemafick
+#sudo apt-get update
+
 gem 'rails_db'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'

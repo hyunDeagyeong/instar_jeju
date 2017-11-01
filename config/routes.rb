@@ -1,15 +1,19 @@
 Rails.application.routes.draw do
   
-  get 'posts' => 'posts#index'
+  #get 'posts' => 'posts#index'
   
-  get 'posts/new' => 'posts#new'
+  #get 'posts/new' => 'posts#new'
   
-  get 'posts/:id' => 'posts#show'
+  #get 'posts/:id' => 'posts#show'
   
-  post 'posts' => 'posts#create'
+  #post 'posts' => 'posts#create'
   
-  get 'posts/:id/edit' => 'posts#edit'
-  put 'posts/:id' => 'posts#update'
+  #get 'posts/:id/edit' => 'posts#edit'
+  #put 'posts/:id' => 'posts#update'
+  
+  root 'posts#index'
+  get 'mypage' => 'post#mypage', as: :mypage
+  resources :posts
   
   
   
@@ -66,6 +70,6 @@ Rails.application.routes.draw do
   #   namespace :admin do
   #     # Directs /admin/products/* to Admin::ProductsController
   #     # (app/controllers/admin/products_controller.rb)
-  #     resources :products
+       resources :products
   #   end
 end
